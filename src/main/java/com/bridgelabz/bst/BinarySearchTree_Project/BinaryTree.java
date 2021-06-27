@@ -40,7 +40,8 @@ public class BinaryTree<K extends Comparable<K>> {
 		if (comparisonResult == 0) {
 			return true;
 		}
-		return comparisonResult < 0 ? findNodeRecursive(currentNode.left, key)
+		return comparisonResult < 0 
+				? findNodeRecursive(currentNode.left, key)
 				: findNodeRecursive(currentNode.right, key);
 	}
 
